@@ -54,9 +54,9 @@
       .container {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
         padding: 20px;
-        max-width: 1200px;
+        max-width: 100%;
         margin: 0 auto;
       }
 
@@ -133,22 +133,28 @@
         }
       }
 
-      /* Tablet and larger: Side-by-side layout */
-      @media (min-width: 769px) {
-        .container {
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 40px;
-        }
-
-        .button {
-          flex: 1;
-          min-width: 300px;
-        }
-
-        .sidebar {
-          flex: 1;
-          min-width: 300px;
+        /* Tablet and larger: Side-by-side layout */
+        @media (min-width: 769px) {
+          .container {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 20px 40px;
+            gap: 0;
+          }
+        
+          .button {
+            flex: 0 0 auto;
+            min-width: 300px;
+            margin-right: 40px;
+          }
+        
+          .sidebar {
+            flex: 0 0 auto;
+            min-width: 300px;
+            margin-left: auto;
+            margin-right: 40px;
+          }
         }
       }
     </style>
