@@ -133,25 +133,25 @@
           width: 100%;
         }
       }
-
+      
       /* Tablet and larger: Side-by-side layout */
-      @media (min-width: 769px) {
-        .container {
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 40px;
-        }
+       @media (min-width: 769px) {
+         .container {
+           flex-direction: row;
+           flex-wrap: wrap;
+           gap: 40px;
+           padding: 20px 40px;
+           justify-content: space-between;
+         }
 
-        .button {
-          flex: 1;
-          min-width: 300px;
-        }
+         .button {
+           flex: 0 0 300px;
+         }
 
-        .sidebar {
-          flex: 1;
-          min-width: 300px;
-        }
-      }
+         .sidebar {
+           flex: 0 0 300px;
+         }
+       }
     </style>
   </head>
     
