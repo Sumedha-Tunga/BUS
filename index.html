@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -54,9 +55,9 @@
       .container {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 40px;
         padding: 20px;
-        max-width: 100%;
+        max-width: 1200px;
         margin: 0 auto;
       }
 
@@ -133,30 +134,24 @@
         }
       }
 
-        /* Tablet and larger: Side-by-side layout */
-        @media (min-width: 769px) {
-          .container {
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            padding: 20px 40px;
-            gap: 0;
-          }
-        
-          .button {
-            flex: 0 0 auto;
-            min-width: 300px;
-            margin-left: 40px;
-          }
-          
-          .sidebar {
-            flex: 0 0 auto;
-            min-width: 300px;
-            margin-left: auto;
-            margin-right: 40px;
-          }
+      /* Tablet and larger: Side-by-side layout */
+      @media (min-width: 769px) {
+        .container {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 40px;
         }
-      
+
+        .button {
+          flex: 1;
+          min-width: 300px;
+        }
+
+        .sidebar {
+          flex: 1;
+          min-width: 300px;
+        }
+      }
     </style>
   </head>
     
@@ -167,29 +162,28 @@
     </div>
 
     <div class="container">
-  <button class="button">
-    <a target="_blank" rel="noopener noreferrer" href="https://uga.questionpro.com/UGA-BUS"> 
-      Got Something To Say About The UGA Bus System? 
-    </a>
-  </button>
+      <div class="sidebar">
+        <h3>Important Links</h3>
+        <ul class="p">
+          <li><a target="_blank" rel="noopener noreferrer" href="/Consent Form_ Turning Anecdotes Into Heuristics - Figuring Out The UGA Bus System.pdf">Consent Form</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="BUS Survey.pdf">Survey Questions Preview</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://uga.questionpro.com/UGA-BUS">The Survey Itself</a></li>
+        </ul>  
+        <br>
+        
+        <h3>Recent Developments</h3>
+        <ul class="p">
+          <li>12/3/2025 - Got funding through the UGA Office of Sustainability <a href="https://sustainability.uga.edu/programs/programs-for-students/campus-sustainability-grants/#:~:text=The%20Bus%20Data%20Collection%20Project"> Campus Sustainability Grants</a></li>
+          <li>4/7/2026 - Obtained IRB approval</li>
+          <li>4/7/2026 - Started sending out the survey</li>
+        </ul>
+      </div>
 
-  <div class="sidebar">
-    <h3>Important Links</h3>
-    <ul class="p">
-      <li><a target="_blank" rel="noopener noreferrer" href="/Consent Form_ Turning Anecdotes Into Heuristics - Figuring Out The UGA Bus System.pdf">Consent Form</a></li>
-      <li><a target="_blank" rel="noopener noreferrer" href="BUS Survey.pdf">Survey Questions Preview</a></li>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://uga.questionpro.com/UGA-BUS">The Survey Itself</a></li>
-    </ul>  
-    <br>
-    
-    <h3>Recent Developments</h3>
-    <ul class="p">
-      <li>12/3/2025 - Got funding through the UGA Office of Sustainability <a href="https://sustainability.uga.edu/programs/programs-for-students/campus-sustainability-grants/#:~:text=The%20Bus%20Data%20Collection%20Project"> Campus Sustainability Grants</a></li>
-      <li>4/7/2026 - Obtained IRB approval</li>
-      <li>4/7/2026 - Started sending out the survey</li>
-    </ul>
-  </div>
-</div>
+      <button class="button">
+        <a target="_blank" rel="noopener noreferrer" href="https://uga.questionpro.com/UGA-BUS"> 
+          Got Something To Say About The UGA Bus System? 
+        </a>
+      </button>
     </div>    
   </body>
 </html>
