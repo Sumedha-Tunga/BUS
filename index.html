@@ -2,57 +2,97 @@
 <html>
   <head>
     <title>UGA BUS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/BUS-nobckg.png">
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         background-image: url('BUS.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        min-height: 100vh;
       }
 
       h1 {
-        text-align:center;
+        text-align: center;
         color: white;
-        font-size:300%;
-        background-color:black;
-        padding:none;
+        font-size: clamp(24px, 8vw, 48px);
+        background-color: black;
+        padding: 20px;
       }
 
       h2 {
-        text-align:center;
+        text-align: center;
         color: white;
-        font-size:150%;
-        background-color:black;
-        padding: 10px;
+        font-size: clamp(16px, 5vw, 32px);
+        background-color: black;
+        padding: 15px;
       }
 
       h3 {
-        text-align:left;
+        text-align: left;
         color: white;
-        font-size:150%;
+        font-size: clamp(18px, 4vw, 24px);
+        margin-top: 15px;
       }
       
       .p {
-        text-align:left;
+        text-align: left;
         color: white;
-        font-size:125%;
+        font-size: clamp(14px, 3.5vw, 20px);
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .button {
         background-color: #BA0C2F;
-        
         cursor: pointer;
-        height:375px;
-        width:425px;
-        position: absolute;
-        right: 25px;
+        padding: 30px;
+        font-size: clamp(16px, 4vw, 24px);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        transition: background-color 0.3s;
+      }
 
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        text-align: center;
-        font-size:125%;
+      .button:hover {
+        background-color: #8a0a23;
+      }
+
+      .button a {
+        text-decoration: none;
+        color: white;
+        display: block;
+      }
+
+      .sidebar {
+        background-color: black;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      ul {
+        list-style-position: inside;
+        margin-left: 10px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
       }
 
       a:link {
@@ -73,23 +113,59 @@
         background-color: transparent;
         text-decoration: none;
       }
+
+      /* Mobile: Stack layout vertically */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          gap: 15px;
+          padding: 15px;
+        }
+
+        .button {
+          padding: 20px;
+          width: 100%;
+        }
+
+        .sidebar {
+          width: 100%;
+        }
+      }
+
+      /* Tablet and larger: Side-by-side layout */
+      @media (min-width: 769px) {
+        .container {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .button {
+          flex: 1;
+          min-width: 300px;
+        }
+
+        .sidebar {
+          flex: 1;
+          min-width: 300px;
+        }
+      }
     </style>
   </head>
     
   <body>
     <div style="background-color:black;">
       <h1><b>Turning Anecdotes Into Heuristics</b> <br> <i>Figuring Out The UGA Bus System</i></h1>
-      <h2>How do UGA students, staff, and faculty experience the University of Georgia’s bus system, and where/how can we improve it?</h2>
+      <h2>How do UGA students, staff, and faculty experience the University of Georgia's bus system, and where/how can we improve it?</h2>
     </div>
 
-    <div style="display: inline-block;">
-      <button class="button" style="font-size:200%;">
-        <div style="background-color: black; padding:5px;">
-          <a target="_blank" rel="noopener noreferrer" href="https://uga.questionpro.com/UGA-BUS"> Got Something To Say About The UGA Bus System? </a>
-        </div>
+    <div class="container">
+      <button class="button">
+        <a target="_blank" rel="noopener noreferrer" href="https://uga.questionpro.com/UGA-BUS"> 
+          Got Something To Say About The UGA Bus System? 
+        </a>
       </button>
       
-      <div style="background-color:black; padding:20px; border-radius: 5px; position: absolute; left: 25px; width:425px;">
+      <div class="sidebar">
         <h3>Important Links</h3>
         <ul class="p">
           <li><a target="_blank" rel="noopener noreferrer" href="/Consent Form_ Turning Anecdotes Into Heuristics - Figuring Out The UGA Bus System.pdf">Consent Form</a></li>
@@ -100,7 +176,9 @@
         
         <h3>Recent Developments</h3>
         <ul class="p">
-          <li>[mm/dd/yyyy] - Sent out the survey</li>
+          <li>12/3/2025 - Got funding through the UGA Office of Sustainability <a href="https://sustainability.uga.edu/programs/programs-for-students/campus-sustainability-grants/#:~:text=The%20Bus%20Data%20Collection%20Project">Campus Sustainability Grants</a></li>
+          <li>4/7/2026 - Obtained IRB approval</li>
+          <li>4/7/2026 - Started sending out the survey</li>
         </ul>
       </div>
     </div>    
