@@ -56,7 +56,8 @@
         flex-direction: column;
         gap: 40px;
         padding: 20px;
-        max-width: 1200px;
+        width: 100%;          
+        max-width: none;      
         margin: 0 auto;
       }
 
@@ -115,7 +116,6 @@
         text-decoration: none;
       }
 
-      /* Mobile: Stack layout vertically */
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
@@ -133,24 +133,21 @@
         }
       }
       
-      /* Tablet and larger: Side-by-side layout */
        @media (min-width: 650px) {
-         .container {
-           flex-direction: row;
-           flex-wrap: wrap;
-           gap: 100px;
-           padding: 20px 0px;
-           justify-content: space-between;
-         }
-
-         .button {
-           flex: 0 0 500px;
-         }
-
-         .sidebar {
-           flex: 0 0 500px;
-         }
-       }
+        .container {
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 40px;              
+          padding: 20px 0;
+          justify-content: center;
+        }
+      
+        .button,
+        .sidebar {
+          flex: 1 1 400px;        
+          max-width: 600px;       
+        }
+      }
     </style>
   </head>
     
