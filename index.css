@@ -102,7 +102,6 @@ a:active {
   text-decoration: none;
 }
 
-/* Mobile first - stack columns vertically */
 @media (max-width: 768px) {
   .row {
     display: flex;
@@ -125,22 +124,5 @@ a:active {
 
   .sidebar {
     width: 100%;
-  }
-}
-
-/* Desktop - arrange in row with proper spacing */
-@media (min-width: 769px) {
-  .row {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .col {
-    flex: 1;
-  }
-
-  .col-5 {
-    flex: 0 0 5%;
   }
 }
