@@ -90,20 +90,20 @@ ul li {
 }
 
 a:link {
-  color: #FFFFFF;
+  color: #E4002B;
   background-color: transparent;
 }
 a:visited {
-  color: #C8D8EB;
+  color: #BA0C2F;
   background-color: transparent;
 }
 a:hover {
-  color: #C8D8EB;
+  color: #00A3AD;
   background-color: transparent;
   text-decoration: none;
 }
 a:active {
-  color: #FFFFFF;
+  color: #C8D8EB;
   background-color: transparent;
   text-decoration: none;
 }
