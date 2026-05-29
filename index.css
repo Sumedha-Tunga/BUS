@@ -94,16 +94,16 @@ a:link {
   background-color: transparent;
 }
 a:visited {
-  color: #BA0C2F;
+  color: #00A3AD;
   background-color: transparent;
 }
 a:hover {
-  color: #00A3AD;
+  color: #C8D8EB;
   background-color: transparent;
   text-decoration: none;
 }
 a:active {
-  color: #C8D8EB;
+  color: #BA0C2F;
   background-color: transparent;
   text-decoration: none;
 }
