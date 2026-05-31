@@ -68,11 +68,9 @@ h3 {
   display: block;
 }
 
-.sidebar {
-  background-color: black;
-  padding: 20px 40px;
-  border-radius: 5px;
-}
+.col {
+    background-color: black;
+  }
 
 ul {
   list-style-position: inside;
@@ -111,6 +109,7 @@ a:active {
   .col {
     width: 100% !important;
     margin-bottom: 20px;
+    background-color: black;
   }
 
   .col-5 {
